@@ -26,6 +26,7 @@
             android:checked="true"
             android:drawableTop="@drawable/my_car"
             android:text="@string/my_car" />
+
         <RadioButton
             android:id="@+id/my_road_condition"
             style="@style/home_tab"

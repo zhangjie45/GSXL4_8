@@ -15,16 +15,8 @@ import com.example.gsxl4_8.R;
  */
 public class MycarFragment extends Fragment {
 
-
-    public MycarFragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_mycar, container, false);
     }
 

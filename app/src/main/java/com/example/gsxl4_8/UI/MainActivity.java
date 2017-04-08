@@ -1,13 +1,11 @@
 package com.example.gsxl4_8.UI;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.support.annotation.IdRes;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.RadioGroup;
 import android.view.KeyEvent;
+import android.widget.FrameLayout;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.gsxl4_8.Fragment.HomeFragment;
@@ -17,67 +15,22 @@ import com.example.gsxl4_8.Fragment.RoadEnvironmentFragment;
 import com.example.gsxl4_8.Fragment.SettingFragment;
 import com.example.gsxl4_8.R;
 
-import static android.R.attr.id;
+public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
 
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
-    private static final String MY_CAR = "mycar";
-    private static final String MY_ROAD = "myroad";
-    private static final String ROAD_ENVIROMENT = "roadenvironment";
-    private static final String SETTING = "setting";
-    private static final String HOME = "home";
-    RadioGroup Rg;
-    private Fragment mycarFragment, myroadFragment, roadEnvironmentFragment, settingFragment, homeFragment;
+    private FrameLayout framlayout;
+    private RadioGroup radiogroup;
+    private FragmentTransaction mTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Rg= (RadioGroup) findViewById(R.id.rg_bar);
-        Rg.setOnCheckedChangeListener(this);
-        FragmentInitView();
+        initView();
+        mTransaction = getSupportFragmentManager().beginTransaction();
+        mTransaction.add(R.id.fg_container,new HomeFragment()).commit();
+
     }
 
-    @Override
-    public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-        if (id == R.id.tab_mar_car) {
-            showFragment(MY_CAR);
-        } else if (id == R.id.my_road_condition) {
-            showFragment(MY_ROAD);
-        } else if (id == R.id.road_environment) {
-            showFragment(ROAD_ENVIROMENT);
-        } else if (id == R.id.setting) {
-            showFragment(SETTING);
-        } else if (id == R.id.tab_home) {
-            showFragment(HOME);
-        }
-    }
-    private void showFragment(String tag) {
-        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-        android.support.v4.app.FragmentTransaction transaction = fragmentManager.beginTransaction();
-        if (tag.equals("mycar")){
-            transaction.replace(R.id.fg_container, mycarFragment).commit();
-        }
-        if (tag.equals("myroad")){
-            transaction.replace(R.id.fg_container, myroadFragment).commit();
-        }
-        if (tag.equals("roadenvironment")){
-            transaction.replace(R.id.fg_container, roadEnvironmentFragment).commit();
-        }
-        if (tag.equals("setting")){
-            transaction.replace(R.id.fg_container, settingFragment).commit();
-        }
-        if (tag.equals("home")){
-            transaction.replace(R.id.fg_container, homeFragment).commit();
-        }
-    }
-    private void FragmentInitView(){
-        mycarFragment=new MycarFragment();
-        myroadFragment=new MyroadFragment();
-        roadEnvironmentFragment=new RoadEnvironmentFragment();
-        settingFragment=new SettingFragment();
-        homeFragment=new HomeFragment();
-        
-    }
     //点击back键提示再按一次退出程序，双击back键时退出程序
     /*用来计算返回键的点击时间间隔*/
     private long exitTiem = 0;
@@ -94,5 +47,31 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             return true;
         }
         return super.onKeyDown(keyCode,event);
+    }
+    private void  initView(){
+        radiogroup = (RadioGroup) findViewById(R.id.rg_bar);
+        framlayout = (FrameLayout) findViewById(R.id.fg_container);
+        radiogroup.setOnCheckedChangeListener(this);
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+        switch (i){
+            case R.id.tab_mar_car:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container,new MycarFragment()).commit();
+                break;
+            case R.id.my_road_condition:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container,new MyroadFragment()).commit();
+                break;
+            case R.id.tab_home:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container,new HomeFragment()).commit();
+                break;
+            case R.id.road_environment:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container,new RoadEnvironmentFragment()).commit();
+                break;
+            case R.id.setting:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container,new SettingFragment()).commit();
+                break;
+        }
     }
 }

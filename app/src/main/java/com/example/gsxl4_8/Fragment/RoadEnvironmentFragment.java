@@ -14,12 +14,6 @@ import com.example.gsxl4_8.R;
  */
 public class RoadEnvironmentFragment extends Fragment {
 
-
-    public RoadEnvironmentFragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
