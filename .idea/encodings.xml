@@ -26,12 +26,12 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_mycar.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_myroad.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_roadenvironment.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_setting.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/raw" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/test/java/com/example/gsxl4_8/layout/fragment_home.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/test/java/com/example/gsxl4_8/layout/fragment_mycar.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/test/java/com/example/gsxl4_8/layout/fragment_myroad.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/test/java/com/example/gsxl4_8/layout/fragment_roadenvironment.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/test/java/com/example/gsxl4_8/layout/fragment_setting.xml" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

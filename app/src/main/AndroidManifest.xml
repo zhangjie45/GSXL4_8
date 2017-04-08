@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".UI.PackQueryActivity" />
+        <activity android:name=".UI.LogActivity" />
+        <activity android:name=".UI.BusQueryActivity"></activity>
     </application>
 
 </manifest>
