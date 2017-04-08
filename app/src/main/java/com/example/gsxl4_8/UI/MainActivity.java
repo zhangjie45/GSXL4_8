@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RadioGroup;
+import android.view.KeyEvent;
+import android.widget.Toast;
 
 import com.example.gsxl4_8.Fragment.HomeFragment;
 import com.example.gsxl4_8.Fragment.MycarFragment;
@@ -75,5 +77,22 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         settingFragment=new SettingFragment();
         homeFragment=new HomeFragment();
         
+    }
+    //点击back键提示再按一次退出程序，双击back键时退出程序
+    /*用来计算返回键的点击时间间隔*/
+    private long exitTiem = 0;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK){
+            if (System.currentTimeMillis()-exitTiem>2000){
+                Toast.makeText(this, "再点击一次退出程序", Toast.LENGTH_SHORT).show();
+                exitTiem = System.currentTimeMillis();
+            }else {
+                finish();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode,event);
     }
 }
