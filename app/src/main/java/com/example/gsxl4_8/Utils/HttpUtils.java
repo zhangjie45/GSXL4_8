@@ -2,6 +2,7 @@ package com.example.gsxl4_8.Utils;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.v4.app.FragmentActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,6 +32,8 @@ public class HttpUtils extends AsyncTask<String, Integer, String> {
         this.object = object;
         this.callBack = callBack;
     }
+
+
 
 
     @Override
