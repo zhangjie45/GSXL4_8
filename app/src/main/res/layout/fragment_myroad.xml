@@ -27,4 +27,75 @@
             android:text="查询"
             android:textSize="15sp"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="排序规则："
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/myroad_sort_spinner"
+            android:layout_width="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+        </Spinner>
+
+        <Button
+            android:id="@+id/btn_myroad_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="排序"
+            android:textSize="15sp"
+            android:background="@drawable/default_button_bg"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:background="@drawable/myroad_header_bg"
+               android:gravity="center"
+               android:text="路口"
+               android:textSize="14sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/myroad_header_bg"
+                android:gravity="center"
+                android:text="路口"
+                android:textSize="14sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/myroad_header_bg"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:text="红灯时长"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/myroad_header_bg"
+                android:text="黄灯时长"
+                android:textSize="14sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
