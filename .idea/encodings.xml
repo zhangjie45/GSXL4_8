@@ -5,7 +5,7 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gsxl4_8/Fragment/MycarFragment.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gsxl4_8/Fragment/MyroadFragment.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gsxl4_8/Fragment/RoadEnvironmentFragment.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gsxl4_8/Fragment/SettingFragment.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/gsxl4_8/Fragment/SettingFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/color/tab_text_color.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi" charset="GBK" />
@@ -13,7 +13,6 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" charset="GBK" />
