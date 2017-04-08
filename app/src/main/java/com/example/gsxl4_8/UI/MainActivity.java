@@ -1,6 +1,6 @@
 package com.example.gsxl4_8.UI;
 
-import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -81,18 +81,9 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        super.onOptionsItemSelected(item);
-        int id = item.getGroupId();
-        Intent intent = null;
-        if (id == R.id.query_stop_car){
-            intent = new Intent(this,PackQueryActivity.class);
-        }else if (id == R.id.query_stop_bus){
-            intent = new Intent(this,BusQueryActivity.class);
-        }else if (id == R.id.query_log){
-            intent = new Intent(this,LogActivity.class);
-        }
-        startActivity(intent);
-        return true;
+
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
