@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gsxl4_8.UI.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fg_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tab_mar_car"
+            style="@style/home_tab"
+            android:checked="true"
+            android:drawableTop="@drawable/my_car"
+            android:text="@string/my_car" />
+
+        <RadioButton
+            android:id="@+id/my_road_condition"
+            style="@style/home_tab"
+            android:drawableTop="@drawable/my_road"
+            android:text="@string/my_road_condition" />
+
+        <RadioButton
+            android:id="@+id/tab_home"
+            style="@style/home_tab"
+            android:drawableTop="@drawable/home_bg"
+            android:text="@string/home" />
+
+        <RadioButton
+            android:id="@+id/road_environment"
+            style="@style/home_tab"
+            android:drawableTop="@drawable/road_enviroment"
+            android:text="@string/road_environment" />
+
+        <RadioButton
+            android:id="@+id/setting"
+            style="@style/home_tab"
+            android:drawableTop="@drawable/setting"
+            android:text="@string/setting" />
+    </RadioGroup>
+
+</LinearLayout>
