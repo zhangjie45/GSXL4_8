@@ -10,9 +10,6 @@ import android.view.ViewGroup;
 import com.example.gsxl4_8.R;
 
 
-/**
- *
- */
 public class MycarFragment extends Fragment {
 
     @Override

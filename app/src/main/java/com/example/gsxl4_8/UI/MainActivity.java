@@ -1,9 +1,11 @@
 package com.example.gsxl4_8.UI;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         setContentView(R.layout.activity_main);
         initView();
         mTransaction = getSupportFragmentManager().beginTransaction();
-        mTransaction.add(R.id.fg_container,new HomeFragment()).commit();
+        mTransaction.add(R.id.fg_container, new HomeFragment()).commit();
 
     }
 
@@ -37,18 +39,19 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK){
-            if (System.currentTimeMillis()-exitTiem>2000){
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (System.currentTimeMillis() - exitTiem > 2000) {
                 Toast.makeText(this, "再点击一次退出程序", Toast.LENGTH_SHORT).show();
                 exitTiem = System.currentTimeMillis();
-            }else {
+            } else {
                 finish();
             }
             return true;
         }
-        return super.onKeyDown(keyCode,event);
+        return super.onKeyDown(keyCode, event);
     }
-    private void  initView(){
+
+    private void initView() {
         radiogroup = (RadioGroup) findViewById(R.id.rg_bar);
         framlayout = (FrameLayout) findViewById(R.id.fg_container);
         radiogroup.setOnCheckedChangeListener(this);
@@ -56,22 +59,35 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
-        switch (i){
+        switch (i) {
             case R.id.tab_mar_car:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container,new MycarFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container, new MycarFragment()).commit();
                 break;
             case R.id.my_road_condition:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container,new MyroadFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container, new MyroadFragment()).commit();
                 break;
             case R.id.tab_home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container,new HomeFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container, new HomeFragment()).commit();
                 break;
             case R.id.road_environment:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container,new RoadEnvironmentFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container, new RoadEnvironmentFragment()).commit();
                 break;
             case R.id.setting:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container,new SettingFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fg_container, new SettingFragment()).commit();
                 break;
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 }
